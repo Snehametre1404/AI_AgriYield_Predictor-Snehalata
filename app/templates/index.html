@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌾 Crop Yield Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🌾 Crop Yield Prediction</h1>
+        <p>Enter your field details to estimate crop yield</p>
+    </header>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="form-container">
+            <form method="POST" action="/predict">
+                <label>🌡️ Temperature (°C)</label>
+                <input type="number" name="Temperature" step="0.01" required>
+
+                <label>💧 Humidity (%)</label>
+                <input type="number" name="Humidity" step="0.01" required>
+
+                <label>🌱 Soil Quality Index</label>
+                <input type="number" name="Soil_Quality" step="0.01" required>
+
+                <label>🧪 NPK Ratio</label>
+                <input type="number" name="NPK_Ratio" step="0.01" required>
+
+                <label>🌾 Fertility Index</label>
+                <input type="number" name="Fertility_Index" step="0.01" required>
+
+                <label>🌾 Crop Type (numeric code)</label>
+                <input type="number" name="Crop_Type" required>
+
+                <button type="submit">Predict Yield</button>
+            </form>
+
+            {% if prediction_text %}
+            <div class="prediction">{{ prediction_text }}</div>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- Decorative Elements -->
+    <div class="decor-leaf"></div>
+    <div class="decor-crop"></div>
+
+</body>
+</html>

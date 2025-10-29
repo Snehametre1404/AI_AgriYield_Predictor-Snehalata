@@ -1,0 +1,119 @@
+/* ====== Global Styles ====== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("../images/image.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ====== Decorative Elements ====== */
+.decor-leaf {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: url("../images/leaf.png") no-repeat center center;
+    background-size: contain;
+    opacity: 0.6;
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite alternate;
+}
+
+.decor-crop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: url("../images/crop.png") no-repeat center center;
+    background-size: contain;
+    opacity: 0.5;
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* ====== Header ====== */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(6, 151, 6, 0.5);
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 2px solid #228B22;
+}
+
+/* ====== Form Section ====== */
+.form-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.form-container {
+    background: rgba(144, 238, 144, 0.85); /* light green overlay */
+    color: #000;
+    padding: 30px 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slightFloat 8s ease-in-out infinite alternate;
+}
+
+/* ====== Form Elements ====== */
+label, input, button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #006400;
+    outline: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #228B22;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #006400;
+    transform: translateY(-2px);
+}
+
+/* ====== Prediction Text ====== */
+.prediction {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #006400;
+}
+
+/* ====== Form floating animation ====== */
+@keyframes slightFloat {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
