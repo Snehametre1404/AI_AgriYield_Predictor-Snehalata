@@ -24,42 +24,7 @@ A Flask-based web interface enables users to upload input data and get instant p
 
 ---
 
-## 🧩 Project Structure
 
-
-AI_AgriYield_Predictor-Snehalata/
-│
-├── app/
-│ ├── app.py # Flask web application
-│ ├── Procfile # Deployment process definition
-│ ├── Requirements.txt # Python dependencies
-│ ├── static/
-│ │ ├── css/style.css # Custom styles
-│ │ └── images/ # UI images
-│ └── templates/
-│ └── index.html # Frontend HTML template
-│
-├── data/
-│ ├── crop_yield_dataset.csv # Cleaned dataset
-│ └── crop_yield_predicted.csv # Model output
-│
-├── model/
-│ ├── crop_yield_model.pkl # Trained ML model
-│ ├── scaler.pkl # Scaler object
-│ ├── predictions.csv # Model predictions
-│ └── visualize.ipynb # Visualization notebook
-│
-├── EDA.ipynb # Exploratory Data Analysis
-├── featureimp.ipynb # Feature importance visualization
-├── Modeltrntest.ipynb # Model training and testing
-├── Evaluation.py # Evaluation metrics
-├── Preprocessing.py # Data preprocessing pipeline
-├── datasetbrk.py # Data splitting logic
-├── load.py # Data loading utilities
-├── predictvsact.py # Actual vs predicted visualization
-├── scaler.py # Scaler initialization script
-├── LICENSE # MIT License
-└── README.md # Project documentation
 
 | Category             | Technologies                     |
 | -------------------- | -------------------------------- |
@@ -73,6 +38,7 @@ AI_AgriYield_Predictor-Snehalata/
 
 
 🔬 Model Workflow:
+
 1.Data Collection: Soil, weather, and crop datasets are merged and cleaned.
 
 2.Feature Engineering: Feature scaling and selection using correlation analysis.
@@ -87,12 +53,19 @@ AI_AgriYield_Predictor-Snehalata/
 
 💻 Usage Instructions:
    1️⃣ Clone the repository:
+   
        1. git clone https://github.com/Snehametre1404/AI_AgriYield_Predictor-Snehalata.git
+       
        2. cd AI_AgriYield_Predictor-Snehalata
+       
    2️⃣ Install dependencies:
+   
         pip install -r app/Requirements.txt
+        
    3️⃣ Run the Flask app:
-        python app/app.py
+   
+       python app/app.py
+        
       Then open your browser and navigate to:http://127.0.0.1:5000/
 
 📈 Sample Output:
@@ -104,21 +77,33 @@ AI_AgriYield_Predictor-Snehalata/
    See the LICENSE file for details.
 
 👩‍💻 Author:
+
     - Snehalata 
+    
     - MCA (2nd Year) Student
+    
     - snehametre333@gmail.com
+    
     - GitHub Profile:[Snehametre1404](https://github.com/Snehametre1404)
 
 💡 Future Enhancements
+
         1.Integration of live weather API data.
+        
         2.Adding support for multiple regional crop datasets.
+        
         3.Predicting soil fertility index and irrigation advice.
+        
         4.Deploying with a React or Streamlit frontend.
  
 ⭐ Acknowledgments
+
 Special thanks to:
+
     Open-source libraries: Scikit-learn, Pandas, Flask
+    
     Agricultural open datasets used for model training
+    
     Mentors and contributors who guided this project   
 
 
