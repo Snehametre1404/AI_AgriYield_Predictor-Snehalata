@@ -5,9 +5,9 @@ import os
 
 app = Flask(__name__)
 
-# -----------------------------
+
 # ✅ Load model from parent 'model' folder
-# -----------------------------
+
 # Construct full path (works both locally and on Render)
 model_path = os.path.join(os.path.dirname(__file__), "..", "model", "crop_yield_model.pkl")
 model_path = os.path.abspath(model_path)
@@ -17,16 +17,16 @@ if not os.path.exists(model_path):
 
 model = joblib.load(model_path)
 
-# -----------------------------
+
 # ✅ Home route
-# -----------------------------
+
 @app.route("/")
 def home():
     return render_template("index.html")
 
-# -----------------------------
+
 # ✅ Predict route
-# -----------------------------
+
 @app.route("/predict", methods=["POST"])
 def predict():
     try:
@@ -54,9 +54,9 @@ def predict():
         # Handle runtime errors gracefully
         return render_template("index.html", prediction_text=f"⚠️ Error: {str(e)}")
 
-# -----------------------------
+
 # ✅ Run Flask app
-# -----------------------------
+
 if __name__ == "__main__":
     # Use environment port for Render, default 5000 for local testing
     port = int(os.environ.get("PORT", 5000))
