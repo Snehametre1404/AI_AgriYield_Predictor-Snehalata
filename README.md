@@ -68,13 +68,14 @@ A Flask-based web interface enables users to upload input data and get instant p
         
       Then open your browser and navigate to:http://127.0.0.1:5000/
 
-   ## 🚀 Live Demo
+  ## 🚀 Live Deployment
 
-Check out the live deployment of **AI AgriYield Predictor** hosted on Render:
+The **AI AgriYield Predictor** web app is live and accessible here:
 
 🔗 **[AI AgriYield Predictor – Live App](https://ai-agriyield-predictor-snehalata.onrender.com)**
 
-This web app predicts **crop yield** based on environmental and soil parameters using a trained machine learning model.
+This Flask-based web app predicts crop yield using environmental and soil data through a trained machine learning model.
+
 
 
 📈 Sample Output:
